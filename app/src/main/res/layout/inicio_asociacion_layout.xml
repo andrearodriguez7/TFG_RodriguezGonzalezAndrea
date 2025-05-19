@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#7B9B68">
+
+    <!-- Título/logo "RESCÁTAME" -->
+    <TextView
+        android:id="@+id/tituloApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RESCÁTAME"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Imagen de animales -->
+    <ImageView
+        android:id="@+id/imagenAnimales"
+        android:layout_width="0dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/animales"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tituloApp" />
+
+    <!-- Botón Perfil -->
+    <Button
+        android:id="@+id/btnPerfil"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#FFFFFF"
+        android:elevation="2dp"
+        android:text="Perfil"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imagenAnimales" />
+
+    <!-- Botón Asociaciones -->
+
+    <!-- Contenedor de la barra de navegación -->
+    <Button
+        android:id="@+id/btnAsociaciones"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#FFFFFF"
+        android:elevation="2dp"
+        android:text="Animales"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.861"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnPerfil" />
+
+    <LinearLayout
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.451"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imagenAnimales"
+        app:layout_constraintVertical_bias="0.441">
+
+        <ImageButton
+            android:id="@+id/btnHome"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:contentDescription="Inicio"
+            android:src="@drawable/casa" />
+
+        <ImageButton
+            android:id="@+id/btnAjustes"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:contentDescription="Ajustes"
+            android:src="@drawable/ajuste" />
+
+        <ImageButton
+            android:id="@+id/btnPerfilNav"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:contentDescription="Perfil"
+            android:src="@drawable/usuario" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

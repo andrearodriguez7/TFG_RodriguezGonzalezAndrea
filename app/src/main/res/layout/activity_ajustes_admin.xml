@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#7B9B68">
+
+    <!-- Contenido principal en ScrollView -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomNavigationView"
+        android:padding="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <!-- Título -->
+            <TextView
+                android:id="@+id/tvAdministrador"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ADMINISTRADOR"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginBottom="32dp" />
+
+            <!-- Botón para gestionar Usuarios -->
+            <Button
+                android:id="@+id/btnGestionarUsuarios"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gestionar Usuarios"
+                android:textSize="16sp"
+                android:background="@drawable/crud_radius"
+                android:backgroundTint="@color/botonAdmin"
+                android:paddingLeft="32dp"
+                android:paddingRight="32dp"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Botón para gestionar Asociaciones -->
+            <Button
+                android:id="@+id/btnGestionarAsociaciones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gestionar Asociaciones"
+                android:textSize="16sp"
+                android:background="@drawable/crud_radius"
+                android:backgroundTint="@color/botonAdmin"
+                android:paddingLeft="32dp"
+                android:paddingRight="32dp"
+                android:layout_marginBottom="24dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Barra de navegación inferior -->
+    <LinearLayout
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/btnHome"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="Inicio"
+            android:src="@drawable/casa" />
+
+        <ImageButton
+            android:id="@+id/btnAjustes"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ajuste"
+            android:background="@android:color/transparent"
+            android:contentDescription="Ajustes" />
+
+        <ImageButton
+            android:id="@+id/btnPerfil"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/usuario"
+            android:background="@android:color/transparent"
+            android:contentDescription="Perfil" />
+    </LinearLayout>
+
+</RelativeLayout>

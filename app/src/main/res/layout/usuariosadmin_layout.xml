@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#7B9B68">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Título -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Usuarios"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:paddingBottom="10dp" />
+
+        <!-- Añadir Usuario -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Añadir Usuario"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp" />
+
+        <!-- Nombre -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Nombre:" />
+
+            <EditText
+                android:id="@+id/etNombreUsuario"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/crud_radius" />
+        </LinearLayout>
+
+        <!-- Correo -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Correo:" />
+
+            <EditText
+                android:id="@+id/etCorreoUsuario"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:inputType="textEmailAddress"
+                android:background="@drawable/crud_radius" />
+        </LinearLayout>
+
+        <!-- Contraseña -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Contraseña:" />
+
+            <EditText
+                android:id="@+id/etPasswordUsuario"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:inputType="textPassword"
+                android:background="@drawable/crud_radius" />
+        </LinearLayout>
+
+        <!-- Teléfono -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Teléfono:" />
+
+            <EditText
+                android:id="@+id/etTelefonoUsuario"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:inputType="phone"
+                android:background="@drawable/crud_radius" />
+        </LinearLayout>
+
+        <!-- Botón Insertar -->
+        <Button
+            android:id="@+id/btnInsertarUsuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Insertar"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/botonAdmin" />
+
+        <!-- Separador -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="20dp"
+            android:background="#CCCCCC" />
+
+        <!-- Eliminar Usuario -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Eliminar Usuario"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Correo para eliminar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Correo:" />
+
+            <EditText
+                android:id="@+id/etEliminarCorreo"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:inputType="textEmailAddress"
+                android:background="@drawable/crud_radius" />
+        </LinearLayout>
+
+        <!-- Botón Eliminar -->
+        <Button
+            android:id="@+id/btnEliminarUsuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Eliminar"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/botonAdmin" />
+
+        <!-- Modificar Usuario -->
+        <Button
+            android:id="@+id/btnModificarUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Modificar Usuario"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="@color/botonAdmin" />
+
+    </LinearLayout>
+</ScrollView>

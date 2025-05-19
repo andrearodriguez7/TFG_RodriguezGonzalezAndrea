@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#7B9B68">
+
+    <!-- Encabezado fijo (fuera del ScrollView) -->
+    <RelativeLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#B3D4A2"
+        android:padding="16dp">
+
+        <ImageButton
+            android:id="@+id/backButtonHistorial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/volver"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Volver"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:id="@+id/headerTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rescátame"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <!-- Contenido desplazable debajo del encabezado y encima de la barra inferior -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/headerLayout"
+        android:layout_above="@+id/bottomNavigationView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Foto del animal -->
+            <ImageView
+                android:id="@+id/imageAnimal"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/animal_image" />
+
+            <!-- Nombre del animal -->
+            <TextView
+                android:id="@+id/animalName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Totó"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp" />
+
+            <!-- Layout horizontal para Edad y Tamaño a la izquierda, Raza y Sexo a la derecha -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <!-- Edad y Tamaño a la izquierda -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/animalAge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Edad: 14 años" />
+
+                    <TextView
+                        android:id="@+id/animalSize"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tamaño: Pequeño" />
+                </LinearLayout>
+
+                <!-- Raza y Sexo a la derecha -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="end">
+
+                    <TextView
+                        android:id="@+id/animalBreed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Raza: Yorkshire" />
+
+                    <TextView
+                        android:id="@+id/animalGender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sexo: Macho" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Título Descripción -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Descripción"
+                android:textStyle="bold"
+                android:layout_marginTop="26dp" />
+
+            <!-- Contenido Descripción -->
+            <TextView
+                android:id="@+id/animalDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Totó es un perro tranquilo y dulce que disfruta de los pequeños placeres de la vida. Le encanta comer y dar tranquilos paseos por la calle."
+                android:justificationMode="inter_word" />
+
+            <!-- Título Salud -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Salud"
+                android:textStyle="bold"
+                android:layout_marginTop="26dp" />
+
+            <!-- Contenido Salud -->
+            <TextView
+                android:id="@+id/animalHealth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Problemas renales: Totó está bajo tratamiento para su salud renal, por lo que requiere cuidados especiales y visitas regulares al veterinario."
+                android:justificationMode="inter_word" />
+
+            <!-- Título Historial -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Historial"
+                android:textStyle="bold"
+                android:layout_marginTop="26dp" />
+
+            <!-- Contenido Historial -->
+            <TextView
+                android:id="@+id/animalHistory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Totó pasó años con una familia que no lo cuidaba muy bien y un día fue abandonado. Asustado y hambriento, una voluntaria del refugio lo encontró y desde entonces está bajo nuestro cuidado, recuperándose poco a poco. Ahora, Totó necesita un hogar para siempre, donde pueda recibir el amor y la tranquilidad que merece en esta etapa de su vida. Con cariño y atención, este pequeño luchador te llenará de amor y gratitud."
+                android:justificationMode="inter_word" />
+
+            <!-- Botón de contactar -->
+            <Button
+                android:id="@+id/contactButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:text="CONTACTAR" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Barra de navegación inferior -->
+    <LinearLayout
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/btnHome"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="Inicio"
+            android:src="@drawable/casa" />
+
+        <ImageButton
+            android:id="@+id/btnAjustes"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ajuste"
+            android:background="@android:color/transparent"
+            android:contentDescription="Ajustes" />
+
+        <ImageButton
+            android:id="@+id/btnPerfil"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/usuario"
+            android:background="@android:color/transparent"
+            android:contentDescription="Perfil" />
+    </LinearLayout>
+
+</RelativeLayout>

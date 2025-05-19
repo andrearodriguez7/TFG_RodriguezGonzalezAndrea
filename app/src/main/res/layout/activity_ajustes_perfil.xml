@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#7B9B68">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="24dp">
+
+        <!-- Título -->
+        <TextView
+            android:id="@+id/tvRescatame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RESCÁTAME"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="32dp" />
+
+        <!-- Foto de Perfil -->
+        <ImageView
+            android:id="@+id/ivPerfil"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:contentDescription="Foto de perfil"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/crud_radius"
+            android:padding="8dp" />
+
+        <!-- Nombre -->
+        <TextView
+            android:id="@+id/tvNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nombre: Juan Pérez"
+            android:textSize="18sp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:background="@drawable/crud_radius"
+            android:padding="12dp" />
+
+        <!-- Correo -->
+        <TextView
+            android:id="@+id/tvCorreo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Correo: juan.perez@example.com"
+            android:textSize="18sp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:background="@drawable/crud_radius"
+            android:padding="12dp" />
+
+        <!-- Teléfono -->
+        <TextView
+            android:id="@+id/tvTelefono"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Teléfono: +34 123 456 789"
+            android:textSize="18sp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:background="@drawable/crud_radius"
+            android:padding="12dp" />
+
+        <!-- Dirección -->
+        <TextView
+            android:id="@+id/tvDireccion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dirección: Calle Ficticia, 123, Madrid"
+            android:textSize="18sp"
+            android:layout_marginBottom="32dp"
+            android:gravity="center"
+            android:background="@drawable/crud_radius"
+            android:padding="12dp" />
+
+        <!-- Botón Cambiar Contraseña -->
+        <Button
+            android:id="@+id/btnCambiarContrasena"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cambiar Contraseña"
+            android:textSize="16sp"
+            android:background="@drawable/crud_radius"
+            android:backgroundTint="@color/botonAdmin"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Botón Cerrar Sesión -->
+        <Button
+            android:id="@+id/btnCerrarSesion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cerrar Sesión"
+            android:textSize="16sp"
+            android:background="@drawable/crud_radius"
+            android:backgroundTint="@color/botonAdmin"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:layout_marginBottom="32dp" />
+
+    </LinearLayout>
+</ScrollView>

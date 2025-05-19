@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#7B9B68">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp">
+
+        <!-- Título -->
+        <TextView
+            android:id="@+id/tvRescatame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RESCÁTAME"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="32dp"/>
+
+        <!-- Foto de la Asociación -->
+        <ImageView
+            android:id="@+id/ivAsociacion"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+        android:contentDescription="Foto de la Asociación"
+        android:layout_marginBottom="32dp"
+        android:layout_gravity="center"/>
+
+        <!-- Nombre de la Asociación -->
+        <TextView
+            android:id="@+id/tvNombreAsociacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Asociación: Amigos de los Animales"
+            android:textSize="18sp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"/>
+
+        <!-- Correo de la Asociación -->
+        <TextView
+            android:id="@+id/tvCorreoAsociacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Correo: asociacion@animales.org"
+            android:textSize="18sp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"/>
+
+        <!-- Teléfono de la Asociación -->
+        <TextView
+            android:id="@+id/tvTelefonoAsociacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Teléfono: +34 987 654 321"
+            android:textSize="18sp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"/>
+
+        <!-- Dirección de la Asociación -->
+        <TextView
+            android:id="@+id/tvDireccionAsociacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dirección: Calle Solidaria, 45, Madrid"
+            android:textSize="18sp"
+            android:layout_marginBottom="32dp"
+            android:gravity="center"/>
+
+        <!-- Botón para cambiar contraseña -->
+        <Button
+            android:id="@+id/btnCambiarContrasenaAsociacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cambiar Contraseña"
+            android:textSize="16sp"
+            android:layout_marginBottom="24dp"
+            android:gravity="center"/>
+
+        <!-- Botón para cerrar sesión -->
+        <Button
+            android:id="@+id/btnCerrarSesionAsociacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cerrar Sesión"
+            android:textSize="16sp"
+            android:layout_marginBottom="24dp"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+</ScrollView>

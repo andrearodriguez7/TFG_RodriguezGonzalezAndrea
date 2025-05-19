@@ -1,0 +1,144 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#7B9B68">
+
+    <!-- Contenedor con padding para todo el contenido excepto la barra -->
+    <LinearLayout
+        android:id="@+id/contentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_above="@id/bottomNavigationView">
+
+        <!-- Aquí va TODO tu contenido actual (header, asociación, botones, etc.) -->
+
+        <!-- Cabecera con el logo y el título "RESCÁTAME" -->
+        <LinearLayout
+            android:id="@+id/headerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="24dp">
+
+            <!-- Logo a la izquierda -->
+            <ImageView
+                android:id="@+id/logoImage"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/logo"
+                android:layout_marginEnd="8dp" />
+
+            <!-- Título "RESCÁTAME" a la derecha -->
+            <TextView
+                android:id="@+id/titleRescatame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RESCÁTAME"
+                android:textSize="24sp"
+                android:gravity="center"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Foto y nombre de la Asociación -->
+        <LinearLayout
+            android:id="@+id/associationLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp">
+
+            <ImageView
+                android:id="@+id/logoAsociacion"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/logo"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/associationName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ARCA DE NOÉ SEVILLA"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Pregunta: ¿Qué animal quieres adoptar? -->
+        <TextView
+            android:id="@+id/questionText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="¿Qué animal quieres adoptar?"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Botones para perros y gatos -->
+        <LinearLayout
+            android:id="@+id/buttonsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:layout_marginBottom="24dp">
+
+            <Button
+                android:id="@+id/btnDogs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Perros"
+                android:layout_marginEnd="16dp" />
+
+            <Button
+                android:id="@+id/btnCats"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gatos" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Barra de navegación inferior -->
+    <LinearLayout
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/btnHome"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="Inicio"
+            android:src="@drawable/casa" />
+
+        <ImageButton
+            android:id="@+id/btnAjustes"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ajuste"
+            android:background="@android:color/transparent"
+            android:contentDescription="Ajustes" />
+
+        <ImageButton
+            android:id="@+id/btnPerfil"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/usuario"
+            android:background="@android:color/transparent"
+            android:contentDescription="Perfil" />
+    </LinearLayout>
+
+</RelativeLayout>
