@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#7B9B68">
@@ -11,6 +11,16 @@
         android:gravity="center"
         android:padding="24dp">
 
+        <!-- Flecha de volver -->
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="start"
+            android:src="@drawable/volver"
+            android:contentDescription="Volver"
+            android:layout_marginBottom="16dp"/>
+
         <!-- Título -->
         <TextView
             android:id="@+id/tvRescatame"
@@ -19,78 +29,65 @@
             android:text="RESCÁTAME"
             android:textSize="24sp"
             android:textStyle="bold"
-            android:gravity="center"
             android:layout_marginBottom="32dp"/>
 
-        <!-- Foto de la Asociación -->
+        <!-- Imagen -->
         <ImageView
             android:id="@+id/ivAsociacion"
             android:layout_width="120dp"
             android:layout_height="120dp"
-        android:contentDescription="Foto de la Asociación"
-        android:layout_marginBottom="32dp"
-        android:layout_gravity="center"/>
+            android:contentDescription="Foto de la Asociación"
+            android:layout_marginBottom="32dp"
+            android:layout_gravity="center"/>
 
-        <!-- Nombre de la Asociación -->
+        <!-- Datos -->
         <TextView
             android:id="@+id/tvNombreAsociacion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Asociación: Amigos de los Animales"
+            android:text="Asociación:"
             android:textSize="18sp"
-            android:layout_marginBottom="20dp"
-            android:gravity="center"/>
+            android:layout_marginBottom="12dp"/>
 
-        <!-- Correo de la Asociación -->
         <TextView
             android:id="@+id/tvCorreoAsociacion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Correo: asociacion@animales.org"
+            android:text="Correo:"
             android:textSize="18sp"
-            android:layout_marginBottom="20dp"
-            android:gravity="center"/>
+            android:layout_marginBottom="12dp"/>
 
-        <!-- Teléfono de la Asociación -->
         <TextView
             android:id="@+id/tvTelefonoAsociacion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Teléfono: +34 987 654 321"
+            android:text="Teléfono:"
             android:textSize="18sp"
-            android:layout_marginBottom="20dp"
-            android:gravity="center"/>
+            android:layout_marginBottom="12dp"/>
 
-        <!-- Dirección de la Asociación -->
         <TextView
             android:id="@+id/tvDireccionAsociacion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Dirección: Calle Solidaria, 45, Madrid"
+            android:text="Dirección:"
             android:textSize="18sp"
-            android:layout_marginBottom="32dp"
-            android:gravity="center"/>
+            android:layout_marginBottom="32dp"/>
 
-        <!-- Botón para cambiar contraseña -->
+        <!-- Botones -->
         <Button
             android:id="@+id/btnCambiarContrasenaAsociacion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Cambiar Contraseña"
             android:textSize="16sp"
-            android:layout_marginBottom="24dp"
-            android:gravity="center"/>
+            android:layout_marginBottom="16dp" />
 
-        <!-- Botón para cerrar sesión -->
         <Button
             android:id="@+id/btnCerrarSesionAsociacion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Cerrar Sesión"
             android:textSize="16sp"
-            android:layout_marginBottom="24dp"
-            android:gravity="center"/>
-
+            android:layout_marginBottom="24dp" />
     </LinearLayout>
-
 </ScrollView>

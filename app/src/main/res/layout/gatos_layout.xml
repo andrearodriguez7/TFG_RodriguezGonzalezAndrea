@@ -2,14 +2,26 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#7B9B68">
+    android:background="#7B9B68"
+    android:padding="16dp">
+
+    <!-- Flecha de retroceso -->
+    <ImageView
+        android:id="@+id/flechaAtras"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/volver"
+        android:contentDescription="Volver"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp" />
 
     <!-- Contenido principal en ScrollView -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/bottomNavigationView"
-        android:padding="16dp">
+        android:layout_below="@id/flechaAtras"
+        android:paddingTop="16dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -24,14 +36,12 @@
                 android:gravity="center">
 
                 <ImageView
-                    android:id="@+id/logoImage"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
                     android:src="@drawable/logo"
                     android:layout_marginEnd="8dp" />
 
                 <TextView
-                    android:id="@+id/titleRescatame"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="RESCÁTAME"
@@ -41,7 +51,6 @@
 
             <!-- Nombre de la asociación -->
             <TextView
-                android:id="@+id/associationName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="ARCA DE NOÉ SEVILLA"
@@ -257,40 +266,4 @@
 
         </LinearLayout>
     </ScrollView>
-
-    <!-- Barra de navegación inferior -->
-    <LinearLayout
-        android:id="@+id/bottomNavigationView"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_alignParentBottom="true"
-        android:background="@color/white"
-        android:orientation="horizontal"
-        android:gravity="center">
-
-        <ImageButton
-            android:id="@+id/btnHome"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:background="@android:color/transparent"
-            android:contentDescription="Inicio"
-            android:src="@drawable/casa" />
-
-        <ImageButton
-            android:id="@+id/btnAjustes"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/ajuste"
-            android:background="@android:color/transparent"
-            android:contentDescription="Ajustes" />
-
-        <ImageButton
-            android:id="@+id/btnPerfil"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/usuario"
-            android:background="@android:color/transparent"
-            android:contentDescription="Perfil" />
-    </LinearLayout>
-
 </RelativeLayout>

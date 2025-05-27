@@ -11,7 +11,7 @@
         android:orientation="vertical"
         android:padding="20dp">
 
-        <!-- Encabezado con flecha -->
+        <!-- Encabezado con flecha de volver -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -30,17 +30,17 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Usuarios"
+                android:text="Asociaciones"
                 android:textSize="20sp"
                 android:textStyle="bold" />
         </LinearLayout>
 
-        <!-- ▼ AÑADIR USUARIO -->
+        <!-- ▼ AÑADIR ASOCIACIÓN -->
         <TextView
             android:id="@+id/tvToggleAgregar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Añadir Usuario ▼"
+            android:text="Añadir Asociación ▼"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"
@@ -48,7 +48,7 @@
             android:textColor="#000000" />
 
         <LinearLayout
-            android:id="@+id/layoutAgregarAnimal"
+            android:id="@+id/layoutAgregarAsociacion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -58,30 +58,30 @@
             <!-- Nombre -->
             <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingTop="10dp">
                 <TextView android:layout_width="120dp" android:layout_height="wrap_content" android:text="Nombre:" />
-                <EditText android:id="@+id/etNombreUsuario" android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:background="@drawable/crud_radius" />
+                <EditText android:id="@+id/etNombreAsociacion" android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:background="@drawable/crud_radius" />
             </LinearLayout>
 
             <!-- Correo -->
             <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingTop="10dp">
                 <TextView android:layout_width="120dp" android:layout_height="wrap_content" android:text="Correo:" />
-                <EditText android:id="@+id/etCorreoUsuario" android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:inputType="textEmailAddress" android:background="@drawable/crud_radius" />
+                <EditText android:id="@+id/etCorreoAsociacion" android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:inputType="textEmailAddress" android:background="@drawable/crud_radius" />
             </LinearLayout>
 
             <!-- Contraseña -->
             <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingTop="10dp">
                 <TextView android:layout_width="120dp" android:layout_height="wrap_content" android:text="Contraseña:" />
-                <EditText android:id="@+id/etContrasenaUsuario" android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:inputType="textPassword" android:background="@drawable/crud_radius" />
+                <EditText android:id="@+id/etContrasenaAsociacion" android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:inputType="textPassword" android:background="@drawable/crud_radius" />
             </LinearLayout>
 
             <!-- Teléfono -->
             <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingTop="10dp">
                 <TextView android:layout_width="120dp" android:layout_height="wrap_content" android:text="Teléfono:" />
-                <EditText android:id="@+id/etTelefonoUsuario" android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:inputType="phone" android:background="@drawable/crud_radius" />
+                <EditText android:id="@+id/etTelefonoAsociacion" android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:inputType="phone" android:background="@drawable/crud_radius" />
             </LinearLayout>
 
             <!-- Botón Agregar -->
             <Button
-                android:id="@+id/btnAgregarUsuario"
+                android:id="@+id/btnAgregarAsociacion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Agregar"
@@ -90,12 +90,12 @@
                 android:backgroundTint="@color/botonAdmin" />
         </LinearLayout>
 
-        <!-- ▼ ELIMINAR USUARIO -->
+        <!-- ▼ ELIMINAR ASOCIACIÓN -->
         <TextView
             android:id="@+id/tvToggleEliminar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Eliminar Usuario ▼"
+            android:text="Eliminar Asociación ▼"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"
@@ -104,7 +104,7 @@
             android:layout_marginTop="20dp" />
 
         <LinearLayout
-            android:id="@+id/layoutEliminarAnimal"
+            android:id="@+id/layoutEliminarAsociacion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -113,11 +113,11 @@
 
             <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingTop="10dp">
                 <TextView android:layout_width="120dp" android:layout_height="wrap_content" android:text="Correo:" />
-                <EditText android:id="@+id/etEliminarCorreo" android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:inputType="textEmailAddress" android:background="@drawable/crud_radius" />
+                <EditText android:id="@+id/etEliminarCorreoAsociacion" android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:inputType="textEmailAddress" android:background="@drawable/crud_radius" />
             </LinearLayout>
 
             <Button
-                android:id="@+id/btnEliminarUsuario"
+                android:id="@+id/btnEliminarAsociacion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Eliminar"
@@ -126,12 +126,12 @@
                 android:backgroundTint="@color/botonAdmin" />
         </LinearLayout>
 
-        <!-- ▼ MODIFICAR USUARIO -->
+        <!-- ▼ MODIFICAR ASOCIACIÓN -->
         <TextView
             android:id="@+id/tvToggleModificar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Modificar Usuario ▼"
+            android:text="Modificar Asociación ▼"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"
@@ -140,7 +140,7 @@
             android:layout_marginTop="20dp" />
 
         <LinearLayout
-            android:id="@+id/layoutModificarAnimal"
+            android:id="@+id/layoutModificarAsociacion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -149,14 +149,14 @@
 
             <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingTop="10dp">
                 <TextView android:layout_width="120dp" android:layout_height="wrap_content" android:text="Correo:" />
-                <EditText android:id="@+id/etModificarCorreo" android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:inputType="textEmailAddress" android:background="@drawable/crud_radius" />
+                <EditText android:id="@+id/etModificarCorreoAsociacion" android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:inputType="textEmailAddress" android:background="@drawable/crud_radius" />
             </LinearLayout>
 
             <Button
-                android:id="@+id/btnModificarUsuario"
+                android:id="@+id/btnModificarAsociacion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Modificar Usuario"
+                android:text="Modificar Asociación"
                 android:layout_marginTop="10dp"
                 android:backgroundTint="@color/botonAdmin" />
         </LinearLayout>

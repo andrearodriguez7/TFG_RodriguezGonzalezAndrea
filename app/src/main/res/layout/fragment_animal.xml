@@ -171,7 +171,7 @@
         </LinearLayout>
     </ScrollView>
 
-    <!-- Barra de navegación inferior -->
+    <!-- Barra de navegación inferior con solo dos botones -->
     <LinearLayout
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
@@ -183,27 +183,21 @@
 
         <ImageButton
             android:id="@+id/btnHome"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
             android:background="@android:color/transparent"
             android:contentDescription="Inicio"
             android:src="@drawable/casa" />
 
         <ImageButton
-            android:id="@+id/btnAjustes"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/ajuste"
-            android:background="@android:color/transparent"
-            android:contentDescription="Ajustes" />
-
-        <ImageButton
             android:id="@+id/btnPerfil"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/usuario"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
             android:background="@android:color/transparent"
-            android:contentDescription="Perfil" />
+            android:contentDescription="Perfil"
+            android:src="@drawable/usuario" />
     </LinearLayout>
 
 </RelativeLayout>

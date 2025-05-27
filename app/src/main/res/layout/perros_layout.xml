@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#7B9B68">
+
+    <!-- Flecha volver -->
+    <ImageView
+        android:id="@+id/btnVolver"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="16dp"
+        android:src="@drawable/volver"
+        android:contentDescription="Volver"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
 
     <!-- Contenido principal desplazable -->
     <ScrollView
@@ -9,7 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/bottomNavigationView"
-        android:background="#7B9B68"
+        android:layout_below="@id/btnVolver"
         android:padding="16dp">
 
         <LinearLayout
@@ -200,6 +213,7 @@
                     android:layout_columnWeight="1">
 
                     <ImageView
+                        android:id="@+id/imageToto"
                         android:layout_width="match_parent"
                         android:layout_height="120dp"
                         android:scaleType="centerCrop"
@@ -257,40 +271,4 @@
             </GridLayout>
         </LinearLayout>
     </ScrollView>
-
-    <!-- Barra de navegación inferior -->
-    <LinearLayout
-        android:id="@+id/bottomNavigationView"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_alignParentBottom="true"
-        android:background="@color/white"
-        android:orientation="horizontal"
-        android:gravity="center">
-
-        <ImageButton
-            android:id="@+id/btnHome"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:background="@android:color/transparent"
-            android:contentDescription="Inicio"
-            android:src="@drawable/casa" />
-
-        <ImageButton
-            android:id="@+id/btnAjustes"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/ajuste"
-            android:background="@android:color/transparent"
-            android:contentDescription="Ajustes" />
-
-        <ImageButton
-            android:id="@+id/btnPerfil"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/usuario"
-            android:background="@android:color/transparent"
-            android:contentDescription="Perfil" />
-    </LinearLayout>
-
 </RelativeLayout>

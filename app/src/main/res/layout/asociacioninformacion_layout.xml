@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#7B9B68">
@@ -10,7 +11,7 @@
         android:orientation="vertical"
         android:padding="20dp">
 
-        <!-- Título con imagen -->
+        <!-- Encabezado -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -19,10 +20,11 @@
             android:paddingBottom="10dp">
 
             <ImageView
+                android:id="@+id/backButton"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/volver"
-                android:contentDescription="Icono Asociación"
+                android:contentDescription="Volver"
                 android:layout_marginEnd="10dp" />
 
             <TextView
@@ -32,296 +34,165 @@
                 android:textSize="20sp"
                 android:textStyle="bold" />
         </LinearLayout>
-        <!-- Añadir Usuario -->
+
+        <!-- ▼ AÑADIR ANIMAL -->
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/tvToggleAgregar"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Añadir Animal"
+            android:text="Añadir Animal ▼"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:layout_marginTop="10dp" />
+            android:padding="8dp"
+            android:background="#B3D4A2"
+            android:textColor="#000000" />
 
-        <!-- Nombre -->
         <LinearLayout
+            android:id="@+id/layoutAgregarAnimal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="10dp"
-            android:orientation="horizontal">
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:paddingTop="10dp">
 
-            <TextView
-                android:layout_width="120dp"
+            <!-- Repite aquí los campos ya adaptados de tu XML -->
+
+            <!-- Nombre -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingTop="10dp">
+                <TextView android:layout_width="120dp" android:layout_height="wrap_content" android:text="Nombre:" />
+                <EditText android:id="@+id/etNombreAnimal" android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:background="@drawable/crud_radius" />
+            </LinearLayout>
+
+            <!-- Edad -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingTop="10dp">
+                <TextView android:layout_width="120dp" android:layout_height="wrap_content" android:text="Edad:" />
+                <EditText android:id="@+id/etEdad" android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:inputType="number" android:background="@drawable/crud_radius" />
+            </LinearLayout>
+
+            <!-- Tamaño -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingTop="10dp">
+                <TextView android:layout_width="120dp" android:layout_height="wrap_content" android:text="Tamaño:" />
+                <EditText android:id="@+id/etTamano" android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:background="@drawable/crud_radius" />
+            </LinearLayout>
+
+            <!-- Raza -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingTop="10dp">
+                <TextView android:layout_width="120dp" android:layout_height="wrap_content" android:text="Raza:" />
+                <EditText android:id="@+id/etRaza" android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:background="@drawable/crud_radius" />
+            </LinearLayout>
+
+            <!-- Sexo -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingTop="10dp">
+                <TextView android:layout_width="120dp" android:layout_height="wrap_content" android:text="Sexo:" />
+                <EditText android:id="@+id/etSexo" android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:background="@drawable/crud_radius" />
+            </LinearLayout>
+
+            <!-- Tipo -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingTop="10dp">
+                <TextView android:layout_width="120dp" android:layout_height="wrap_content" android:text="Tipo:" />
+                <EditText android:id="@+id/etTipo" android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:background="@drawable/crud_radius" />
+            </LinearLayout>
+
+            <!-- Descripción -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingTop="10dp">
+                <TextView android:layout_width="120dp" android:layout_height="wrap_content" android:text="Descripción:" />
+                <EditText android:id="@+id/etDescripcion" android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:background="@drawable/crud_radius" android:inputType="textMultiLine" />
+            </LinearLayout>
+
+            <!-- Salud -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingTop="10dp">
+                <TextView android:layout_width="120dp" android:layout_height="wrap_content" android:text="Salud:" />
+                <EditText android:id="@+id/etSalud" android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:background="@drawable/crud_radius" android:inputType="textMultiLine" />
+            </LinearLayout>
+
+            <!-- Historia -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingTop="10dp">
+                <TextView android:layout_width="120dp" android:layout_height="wrap_content" android:text="Historia:" />
+                <EditText android:id="@+id/etHistoria" android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:background="@drawable/crud_radius" android:inputType="textMultiLine" />
+            </LinearLayout>
+
+            <!-- URL imagen -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingTop="10dp">
+                <TextView android:layout_width="120dp" android:layout_height="wrap_content" android:text="URL Imagen:" />
+                <EditText android:id="@+id/etUrlImagen" android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:background="@drawable/crud_radius" android:inputType="textUri" />
+            </LinearLayout>
+
+            <!-- Botón -->
+            <Button
+                android:id="@+id/btnAgregar"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nombre:" />
-
-            <EditText
-                android:id="@+id/etNombreUsuario"
-                android:layout_width="0dp"
-                android:layout_height="40dp"
-                android:layout_weight="1"
-                android:background="@drawable/crud_radius" />
+                android:text="Agregar"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/botonAdmin" />
         </LinearLayout>
 
-        <!-- Edad -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="10dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:text="Edad:" />
-
-            <EditText
-                android:id="@+id/etCorreoUsuario"
-                android:layout_width="0dp"
-                android:layout_height="40dp"
-                android:layout_weight="1"
-                android:inputType="number"
-                android:background="@drawable/crud_radius" />
-        </LinearLayout>
-
-        <!-- Tamaño -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="10dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:text="Tamaño:" />
-
-            <EditText
-                android:id="@+id/etTamanoUsuario"
-                android:layout_width="0dp"
-                android:layout_height="40dp"
-                android:layout_weight="1"
-                android:background="@drawable/crud_radius" />
-        </LinearLayout>
-
-        <!-- Raza -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="10dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:text="Raza:" />
-
-            <EditText
-                android:id="@+id/etRazaUsuario"
-                android:layout_width="0dp"
-                android:layout_height="40dp"
-                android:layout_weight="1"
-                android:background="@drawable/crud_radius" />
-        </LinearLayout>
-
-        <!-- Sexo -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="10dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:text="Sexo:" />
-
-            <EditText
-                android:id="@+id/etSexoAnimal"
-                android:layout_width="0dp"
-                android:layout_height="40dp"
-                android:layout_weight="1"
-                android:background="@drawable/crud_radius"
-                android:hint="" />
-        </LinearLayout>
-
-        <!-- Tipo (Perro/Gato) -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="10dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:text="Tipo:" />
-
-            <EditText
-                android:id="@+id/etTipoAnimal"
-                android:layout_width="0dp"
-                android:layout_height="40dp"
-                android:layout_weight="1"
-                android:background="@drawable/crud_radius"
-                android:hint="" />
-        </LinearLayout>
-
-        <!-- Descripción -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="10dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:text="Descripción:" />
-
-            <EditText
-                android:id="@+id/etDescripcion"
-                android:layout_width="0dp"
-                android:layout_height="40dp"
-                android:layout_weight="1"
-                android:background="@drawable/crud_radius"
-                android:inputType="textMultiLine"
-                android:gravity="top"
-                android:hint="" />
-        </LinearLayout>
-
-        <!-- Salud -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="10dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:text="Salud:" />
-
-            <EditText
-                android:id="@+id/etSalud"
-                android:layout_width="0dp"
-                android:layout_height="40dp"
-                android:layout_weight="1"
-                android:background="@drawable/crud_radius"
-                android:inputType="textMultiLine"
-                android:gravity="top"
-                android:hint="" />
-        </LinearLayout>
-
-        <!-- Historia -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="10dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:text="Historia:" />
-
-            <EditText
-                android:id="@+id/etHistoria"
-                android:layout_width="0dp"
-                android:layout_height="40dp"
-                android:layout_weight="1"
-                android:background="@drawable/crud_radius"
-                android:inputType="textMultiLine"
-                android:gravity="top"
-                android:hint="" />
-        </LinearLayout>
-
-        <!-- URL Imagen -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="10dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:text="URL Imagen:" />
-
-            <EditText
-                android:id="@+id/etUrlImagen"
-                android:layout_width="0dp"
-                android:layout_height="40dp"
-                android:layout_weight="1"
-                android:background="@drawable/crud_radius"
-                android:inputType="textUri"
-                android:hint="https://..." />
-        </LinearLayout>
-
-
-
-
-        <!-- Botón Insertar -->
-        <Button
-            android:id="@+id/btnInsertarUsuario"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Agregar"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="16dp"
-            android:backgroundTint="@color/botonAdmin" />
-
-        <!-- Separador -->
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginVertical="20dp"
-            android:background="#CCCCCC" />
-
-        <!-- Eliminar Usuario -->
+        <!-- ▼ ELIMINAR ANIMAL -->
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Eliminar Animal"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <!-- Correo para eliminar -->
-        <LinearLayout
+            android:id="@+id/tvToggleEliminar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="10dp"
-            android:orientation="horizontal">
+            android:text="Eliminar Animal ▼"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:padding="8dp"
+            android:background="#B3D4A2"
+            android:textColor="#000000"
+            android:layout_marginTop="20dp" />
 
-            <TextView
-                android:layout_width="120dp"
+        <LinearLayout
+            android:id="@+id/layoutEliminarAnimal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:paddingTop="10dp">
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingTop="10dp">
+                <TextView android:layout_width="120dp" android:layout_height="wrap_content" android:text="Nombre:" />
+                <EditText android:id="@+id/etEliminarNombre" android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:background="@drawable/crud_radius" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnEliminar"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nombre:" />
-
-            <EditText
-                android:id="@+id/etEliminarCorreo"
-                android:layout_width="0dp"
-                android:layout_height="40dp"
-                android:layout_weight="1"
-                android:inputType="textEmailAddress"
-                android:background="@drawable/crud_radius" />
+                android:text="Eliminar"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/botonAdmin" />
         </LinearLayout>
 
-        <!-- Botón Eliminar -->
-        <Button
-            android:id="@+id/btnEliminarUsuario"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Eliminar"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="16dp"
-            android:backgroundTint="@color/botonAdmin" />
-
-        <!-- Modificar Usuario -->
-        <Button
-            android:id="@+id/btnModificarUsuario"
+        <!-- ▼ MODIFICAR ANIMAL -->
+        <TextView
+            android:id="@+id/tvToggleModificar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Modificar Animal"
-            android:layout_marginTop="30dp"
-            android:backgroundTint="@color/botonAdmin" />
+            android:text="Modificar Animal ▼"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:padding="8dp"
+            android:background="#B3D4A2"
+            android:textColor="#000000"
+            android:layout_marginTop="20dp" />
+
+        <LinearLayout
+            android:id="@+id/layoutModificarAnimal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:paddingTop="10dp">
+
+            <Button
+                android:id="@+id/btnModificar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Modificar Animal"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/botonAdmin" />
+        </LinearLayout>
 
     </LinearLayout>
 </ScrollView>

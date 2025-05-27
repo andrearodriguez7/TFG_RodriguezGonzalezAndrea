@@ -2,8 +2,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#7B9B68"
-    android:id="@+id/main"
-    >
+    android:id="@+id/main">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -12,24 +11,20 @@
         android:padding="24dp"
         android:gravity="start">
 
-        <!-- Ahora los textos a la izquierda -->
-
-        <!-- Campo de correo -->
+        <!-- Logo y título centrado -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:orientation="vertical">
 
-            <!-- Logo -->
             <ImageView
                 android:id="@+id/logoImage"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:contentDescription="Logo"
+                android:contentDescription="Logo de Rescátame"
                 android:src="@drawable/logo" />
 
-            <!-- Título -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -40,72 +35,77 @@
                 android:textStyle="bold" />
         </LinearLayout>
 
+        <!-- Correo -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Usuario o correo electrónico"
             android:textColor="#000000"
             android:layout_marginTop="16dp"
-            android:textSize="14sp"
-            android:textAlignment="viewStart"/>  <!-- Se puede poner textAlignment -->
+            android:textSize="14sp" />
 
         <EditText
             android:id="@+id/etCorreo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:minHeight="48dp"
             android:hint="Correo"
             android:inputType="textEmailAddress"
-            android:layout_marginTop="8dp"/>
+            android:textColor="#000000"
+            android:backgroundTint="#D5D5D5"
+            android:layout_marginTop="8dp" />
 
-        <!-- Campo de contraseña -->
+        <!-- Contraseña -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Contraseña"
             android:textColor="#000000"
             android:layout_marginTop="16dp"
-            android:textSize="14sp"
-            android:textAlignment="viewStart"/>
+            android:textSize="14sp" />
 
         <EditText
             android:id="@+id/etContrasena"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:minHeight="48dp"
             android:hint="Contraseña"
             android:inputType="textPassword"
-            android:layout_marginTop="8dp"/>
+            android:textColor="#000000"
+            android:backgroundTint="#D5D5D5"
+            android:layout_marginTop="8dp" />
 
-        <!-- Enlace para contraseña olvidada -->
+        <!-- Olvidar contraseña -->
         <TextView
             android:id="@+id/tvRecuperarContrasena"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="¿Contraseña olvidada?"
-            android:textColor="#0000FF"
+            android:textColor="#003366"
             android:layout_marginTop="8dp"
-            android:textSize="14sp"
-            android:textAlignment="viewStart"/>
+            android:textSize="14sp" />
 
-        <!-- Botón iniciar sesión -->
+        <!-- Botón Iniciar sesión -->
         <Button
             android:id="@+id/btnIniciarSesion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:minHeight="48dp"
             android:text="ENTRAR"
             android:layout_marginTop="16dp"
-            android:background="#79af74"
-            android:textColor="#FFFFFF"/>
+            android:background="#79AF74"
+            android:textColor="#FFFFFF" />
 
-        <!-- Enlace para registrarse -->
+        <!-- Registro -->
         <TextView
             android:id="@+id/tvCrearCuenta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="80dp"
             android:text="¿No tienes cuenta? Regístrate"
-            android:textColor="#0000FF"
+            android:textColor="#003366"
             android:layout_marginTop="16dp"
-            android:textSize="14sp"/>
+            android:textSize="14sp"
+            android:layout_gravity="center_horizontal" />
 
     </LinearLayout>
 </ScrollView>

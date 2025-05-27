@@ -12,7 +12,6 @@
         android:padding="16dp"
         android:layout_above="@id/bottomNavigationView">
 
-        <!-- Aquí va TODO tu contenido actual (header, asociación, botones, etc.) -->
 
         <!-- Cabecera con el logo y el título "RESCÁTAME" -->
         <LinearLayout
@@ -124,13 +123,7 @@
             android:contentDescription="Inicio"
             android:src="@drawable/casa" />
 
-        <ImageButton
-            android:id="@+id/btnAjustes"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/ajuste"
-            android:background="@android:color/transparent"
-            android:contentDescription="Ajustes" />
+
 
         <ImageButton
             android:id="@+id/btnPerfil"

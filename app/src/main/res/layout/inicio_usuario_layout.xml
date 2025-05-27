@@ -3,7 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#7B9B68">
+    android:background="#7B9B68"
+    android:id="@+id/main">
+
+    <!-- Flecha de volver (cerrar sesión) -->
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_margin="16dp"
+        android:src="@drawable/volver"
+        android:contentDescription="Cerrar sesión"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <!-- Título/logo "RESCÁTAME" -->
     <TextView
@@ -16,7 +28,8 @@
         android:textColor="#000000"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backButton" />
 
     <!-- Imagen de animales -->
     <ImageView
@@ -60,45 +73,5 @@
         app:layout_constraintTop_toBottomOf="@id/btnPerfil"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
-
-    <!-- Contenedor de la barra de navegación -->
-    <LinearLayout
-        android:id="@+id/bottomNavigationView"
-        android:layout_width="0dp"
-        android:layout_height="70dp"
-        android:background="@color/white"
-        android:orientation="horizontal"
-        android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
-        <ImageButton
-            android:id="@+id/btnHome"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:contentDescription="Inicio"
-            android:src="@drawable/casa" />
-
-        <ImageButton
-            android:id="@+id/btnAjustes"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:src="@drawable/ajuste"
-            android:background="@android:color/transparent"
-            android:contentDescription="Ajustes" />
-
-        <ImageButton
-            android:id="@+id/btnPerfilNav"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:src="@drawable/usuario"
-            android:background="@android:color/transparent"
-            android:contentDescription="Perfil" />
-    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

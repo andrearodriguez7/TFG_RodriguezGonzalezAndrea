@@ -1,32 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.rescatame">
 
     <application
         android:allowBackup="true"
-        android:dataExtractionRules="@xml/data_extraction_rules"
-        android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Rescatame"
-        tools:targetApi="31">
-        <activity
-            android:name=".Registro"
-            android:exported="false" />
-        <activity
-            android:name=".AjustesAdmin"
-            android:exported="false" />
+        android:theme="@style/Theme.Rescatame">
+
         <activity
             android:name=".IniciarSesion"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".AjustesAdmin" android:exported="false" />
+        <activity android:name=".AjustesPerfilAsociacion" android:exported="false" />
+        <activity android:name=".AsociacionesActivity" android:exported="false" />
+        <activity android:name=".AsociacionesAdminActivity" android:exported="false" />
+        <activity android:name=".DetalleAnimalActivity" android:exported="false" />
+        <activity android:name=".GatosActivity" android:exported="false" />
+        <activity android:name=".GestionAnimalesActivity" android:exported="false" />
+        <activity android:name=".InicioAsociacionActivity" android:exported="false" />
+        <activity android:name=".InicioProtectora" android:exported="false" />
+        <activity android:name=".MainActivity" android:exported="false" />
+        <activity android:name=".PantallaUsuario" android:exported="false" />
+        <activity android:name=".PerfilUsuario" android:exported="false" />
+        <activity android:name=".PerrosActivity" android:exported="false" />
+        <activity android:name=".Registro" android:exported="false" />
+        <activity android:name=".UsuariosAdminActivity" android:exported="false" />
+
     </application>
 
 </manifest>
