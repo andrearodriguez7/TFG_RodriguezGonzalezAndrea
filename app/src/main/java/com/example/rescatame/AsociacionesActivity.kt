@@ -21,7 +21,7 @@ class AsociacionesActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.asociaciones_activity) // Asegúrate que se llama así tu XML
+        setContentView(R.layout.asociaciones_activity)
 
         // Flecha para volver
         val backButton = findViewById<ImageView>(R.id.backButton)
