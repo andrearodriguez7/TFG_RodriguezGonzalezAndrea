@@ -3,7 +3,7 @@
     android:layout_height="match_parent"
     android:background="#7B9B68">
 
-    <!-- Contenedor con padding para todo el contenido excepto la barra -->
+    <!-- Contenedor-->
     <LinearLayout
         android:id="@+id/contentLayout"
         android:layout_width="match_parent"
